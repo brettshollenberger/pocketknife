@@ -1,4 +1,29 @@
 (function() {
+    var root = this;
+
+    var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
+
+    var
+        push             = ArrayProto.push,
+        slice            = ArrayProto.slice,
+        concat           = ArrayProto.concat,
+        toString         = ObjProto.toString,
+        hasOwnProperty   = ObjProto.hasOwnProperty;
+
+    var
+        nativeForEach      = ArrayProto.forEach,
+        nativeMap          = ArrayProto.map,
+        nativeReduce       = ArrayProto.reduce,
+        nativeReduceRight  = ArrayProto.reduceRight,
+        nativeFilter       = ArrayProto.filter,
+        nativeEvery        = ArrayProto.every,
+        nativeSome         = ArrayProto.some,
+        nativeIndexOf      = ArrayProto.indexOf,
+        nativeLastIndexOf  = ArrayProto.lastIndexOf,
+        nativeIsArray      = Array.isArray,
+        nativeKeys         = Object.keys,
+        nativeBind         = FuncProto.bind;
+        
     if (!Function.prototype.bind) {
         Function.prototype.bind = function(oThis) {
             if (typeof this !== 'function') {
