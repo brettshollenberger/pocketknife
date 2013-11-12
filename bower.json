@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "0.0.1",
+  "authors": [
+    "Brett Shollenberger <brett.shollenberger@gmail.com>"
+  ],
+  "description": "Javascript utility belt",
+  "main": "pocketknife.js",
+  "keywords": [
+    "Javascript",
+    "utility"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
