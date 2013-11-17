@@ -1,6 +1,6 @@
 {
-  "name": "y",
-  "version": "0.0.1",
+  "name": "PocketKnife",
+  "version": "0.0.2",
   "authors": [
     "Brett Shollenberger <brett.shollenberger@gmail.com>"
   ],
@@ -18,5 +18,8 @@
     "app/bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "lodash": "latest"
+  }
 }
