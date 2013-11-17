@@ -61,6 +61,14 @@
     };
 
     var enumerable = {
+      each: {
+        enumerable: false,
+        value: function(cb) {
+          for (var i in this) {
+            cb(this[i]);
+          }
+        }
+      },
       all: {
         enumerable: false,
         value: function(cb) {
@@ -104,16 +112,5 @@
         }
       }
     };
-
-    Object.defineProperty(Array.prototype, 'each', {
-      enumerable: false,
-      value: function(cb) {
-        for (var i in this) {
-          cb(this[i]);
-        }
-      }
-    });
-
-    _.mixin(pk);
 
 }).call(this);
