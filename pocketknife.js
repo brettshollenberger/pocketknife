@@ -60,6 +60,12 @@
       }
     };
 
+    pk.withoutRegex = function(collection, regex) {
+      return _.chain(collection).map(function(item) {
+            if (item.toString() != regex.toString()) return item;
+        }).compact().value();
+    };
+
     var enumerable = {
       each: {
         enumerable: false,
