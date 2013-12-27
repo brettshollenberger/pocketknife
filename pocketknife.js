@@ -55,7 +55,19 @@
     pk.toBoolean = function(value) {
       if (value == 'false') return false;
       return !!value;
-    }
+    };
+
+    pk.initializeBooleanProperty = function(object, propertyName, initializationObject) {
+      var privateValueOfProperty;
+      Object.defineProperty(object, propertyName, {
+        enumerable: true,
+        get: function()    { return privateValueOfProperty; },
+        set: function(val) { privateValueOfProperty = pk.toBoolean(val); }
+      });
+      if (initializationObject) {
+        object[propertyName] = initializationObject[propertyName];
+      }
+    };
 
     pk.mixin = function(receiver, giver) {
       for (var i in giver) {
