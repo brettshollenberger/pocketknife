@@ -52,6 +52,11 @@
         return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
     };
 
+    pk.toBoolean = function(value) {
+      if (value == 'false') return false;
+      return !!value;
+    }
+
     pk.mixin = function(receiver, giver) {
       for (var i in giver) {
         if (!receiver.hasOwnProperty(i)) {
